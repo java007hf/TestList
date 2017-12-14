@@ -1,4 +1,13 @@
-<resources>
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:store="http://schemas.android.com/apk/res/ju.xposed.com.jumodle">
 
+    <style name="recycler">
+        <item name="android:listDivider">@drawable/divider_bg</item>
+    </style>
+    
+    <style name="BaseTheme" parent="@android:style/Theme.Holo">
+        <item name="windowActionBar">true</item>
 
+    </style>
 </resources>
