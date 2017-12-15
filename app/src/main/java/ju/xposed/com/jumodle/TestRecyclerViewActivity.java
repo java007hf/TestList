@@ -33,7 +33,7 @@ public class TestRecyclerViewActivity extends Activity {
     private static final String TAG = "TestRecyclerViewActivity";
     private RecyclerView mRecyclerView;
     private List<DataInfo> mDatas;
-    private HomeAdapter mAdapter;
+    private RecyclerViewAdapter mAdapter;
     private Random random = new Random(12313123l);
 
     class DataInfo {
@@ -57,9 +57,22 @@ public class TestRecyclerViewActivity extends Activity {
         mRecyclerView.addItemDecoration(new DividerGridItemDecoration(this));
 //        mRecyclerView.setLayoutManager(new GridLayoutManager(this, 5));
 
-        mRecyclerView.setLayoutManager(new StaggeredGridLayoutManager(4,        StaggeredGridLayoutManager.VERTICAL));
+        mRecyclerView.setLayoutManager(new StaggeredGridLayoutManager(4, StaggeredGridLayoutManager.VERTICAL));
         mRecyclerView.setItemAnimator(new DefaultItemAnimator());
-        mRecyclerView.setAdapter(mAdapter = new HomeAdapter());
+        mRecyclerView.setAdapter(mAdapter = new RecyclerViewAdapter(this, mDatas));
+        mAdapter.setOnItemClickLitener(new RecyclerViewAdapter.OnItemClickLitener() {
+            @Override
+            public void onItemClick(View view, int position) {
+                Toast.makeText(TestRecyclerViewActivity.this, "onItemClick : " + position, Toast.LENGTH_SHORT)
+                        .show();
+            }
+
+            @Override
+            public void onItemLongClick(View view, int position) {
+                Toast.makeText(TestRecyclerViewActivity.this, "onItemLongClick : " + position, Toast.LENGTH_SHORT)
+                        .show();
+            }
+        });
 
     }
 
@@ -89,7 +102,7 @@ public class TestRecyclerViewActivity extends Activity {
                         .show();
                 DataInfo dataInfo = new DataInfo();
 
-                dataInfo.height = 50+ random.nextInt(400);
+                dataInfo.height = 50 + random.nextInt(400);
                 dataInfo.text = "" + dataInfo.height;
                 mDatas.add(dataInfo);
 
@@ -106,44 +119,8 @@ public class TestRecyclerViewActivity extends Activity {
         for (int i = 'A'; i < 'z'; i++) {
             DataInfo d = new DataInfo();
             d.text = "" + (char) i;
-            d.height = 50+ random.nextInt(400);
+            d.height = 50 + random.nextInt(400);
             mDatas.add(d);
-        }
-    }
-
-    class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.MyViewHolder> {
-
-
-        @Override
-        public MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-            MyViewHolder holder = new MyViewHolder(LayoutInflater.from(
-                    TestRecyclerViewActivity.this).inflate(R.layout.item_home, parent,
-                    false));
-            return holder;
-        }
-
-        @Override
-        public void onBindViewHolder(MyViewHolder holder, int position) {
-            holder.tv.setText(mDatas.get(position).text);
-
-            FrameLayout.LayoutParams layoutParams = new FrameLayout.LayoutParams(50, mDatas.get(position).height);
-            holder.tv.setLayoutParams(layoutParams);
-
-        }
-
-        @Override
-        public int getItemCount() {
-            return mDatas.size();
-        }
-
-        class MyViewHolder extends RecyclerView.ViewHolder {
-
-            TextView tv;
-
-            public MyViewHolder(View view) {
-                super(view);
-                tv = (TextView) view.findViewById(R.id.id_num);
-            }
         }
     }
 }

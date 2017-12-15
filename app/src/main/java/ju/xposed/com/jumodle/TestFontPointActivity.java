@@ -37,7 +37,7 @@ public class TestFontPointActivity extends AppCompatActivity {
     protected void onResume() {
         super.onResume();
 
-        int pix[] = text2pix("1234593412394214214234");
+        int pix[] = text2pix("123456789012345678901234567890");
         mMyView.setPix(pix);
         mMyView.invalidate();
     }
