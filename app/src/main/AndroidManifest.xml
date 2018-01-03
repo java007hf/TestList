@@ -51,6 +51,15 @@
                 <action android:name="ju.xposed.com.jumodle.TEST" />
             </intent-filter>
         </activity>
+
+
+        <activity android:name=".TestHttpActivity"
+            android:label="TestHttpActivity">
+            <intent-filter>
+                <action android:name="ju.xposed.com.jumodle.TEST" />
+            </intent-filter>
+        </activity>
+
     </application>
 
 </manifest>

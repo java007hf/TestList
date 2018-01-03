@@ -58,6 +58,12 @@ public class TestRecyclerViewActivity extends Activity {
 //        mRecyclerView.setLayoutManager(new GridLayoutManager(this, 5));
 
         mRecyclerView.setLayoutManager(new StaggeredGridLayoutManager(4, StaggeredGridLayoutManager.VERTICAL));
+
+        // 设置组件复用回收池
+        RecyclerView.RecycledViewPool viewPool = new RecyclerView.RecycledViewPool();
+        mRecyclerView.setRecycledViewPool(viewPool);
+        viewPool.setMaxRecycledViews(0, 10);
+
         mRecyclerView.setItemAnimator(new DefaultItemAnimator());
         mRecyclerView.setAdapter(mAdapter = new RecyclerViewAdapter(this, mDatas));
         mAdapter.setOnItemClickLitener(new RecyclerViewAdapter.OnItemClickLitener() {

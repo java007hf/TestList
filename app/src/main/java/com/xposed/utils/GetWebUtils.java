@@ -1,13 +1,15 @@
-package ju.xposed.com.jumodle;
+package com.xposed.utils;
 
 import android.util.Log;
 
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
 import org.apache.http.client.HttpClient;
-import org.apache.http.client.entity.UrlEncodedFormEntity;
+import org.apache.http.client.methods.HttpDelete;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.client.methods.HttpPost;
+import org.apache.http.client.methods.HttpPut;
+import org.apache.http.client.methods.HttpUriRequest;
 import org.apache.http.impl.client.DefaultHttpClient;
 
 import java.io.BufferedReader;
@@ -65,45 +67,40 @@ public class GetWebUtils {
      * 2011-02-15
      */
     public static String posturl(String url) {
-        InputStream is = null;
-        String result = "";
-
-        try {
-            HttpClient httpclient = new DefaultHttpClient();
-            HttpPost httppost = new HttpPost(url);
-            HttpResponse response = httpclient.execute(httppost);
-            HttpEntity entity = response.getEntity();
-            is = entity.getContent();
-        } catch (Exception e) {
-            return "Fail to establish http connection!" + e.toString();
-        }
-
-        try {
-            BufferedReader reader = new BufferedReader(new InputStreamReader(is, "utf-8"));
-            StringBuilder sb = new StringBuilder();
-            String line = null;
-            while ((line = reader.readLine()) != null) {
-                sb.append(line + "\n");
-            }
-            is.close();
-
-            result = sb.toString();
-        } catch (Exception e) {
-            return "Fail to convert net stream!";
-        }
-
-        return result;
+        return exe("POST", url);
     }
 
 
     public static String geturl(String url) {
+        return exe("GET", url);
+    }
+
+    public static String puturl(String url) {
+        return exe("PUT", url);
+    }
+
+    public static String delurl(String url) {
+        return exe("DEL", url);
+    }
+
+    private static String exe(String type, String url) {
         InputStream is = null;
         String result = "";
-
         try {
             HttpClient httpclient = new DefaultHttpClient();
-            HttpGet httpget = new HttpGet(url);
-            HttpResponse response = httpclient.execute(httpget);
+            HttpUriRequest request = null;
+            if ("GET".equals(type)) {
+                request = new HttpGet(url);
+            } else if ("POST".equals(type)) {
+                request = new HttpPost(url);
+            } else if ("DELE".equals(type)) {
+                request = new HttpDelete(url);
+            } else if ("PUT".equals(type)) {
+                request = new HttpPut(url);
+            } else {
+                return "Fail not type for " + type;
+            }
+            HttpResponse response = httpclient.execute(request);
             HttpEntity entity = response.getEntity();
             is = entity.getContent();
         } catch (Exception e) {
