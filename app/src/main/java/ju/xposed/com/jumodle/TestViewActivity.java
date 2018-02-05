@@ -3,6 +3,8 @@ package ju.xposed.com.jumodle;
 import android.app.Activity;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.util.Log;
+import android.view.MotionEvent;
 import android.widget.LinearLayout;
 
 /**
@@ -10,6 +12,7 @@ import android.widget.LinearLayout;
  */
 
 public class TestViewActivity extends Activity {
+    private static final String TAG = "TestViewActivity";
     private TestView mTestView;
 
     @Override
@@ -30,5 +33,11 @@ public class TestViewActivity extends Activity {
         super.onResume();
 
         mTestView.invalidate();
+    }
+
+    @Override
+    public boolean onTouchEvent(MotionEvent event) {
+        Log.d(TAG, "===onTouchEvent==", new RuntimeException());
+        return super.onTouchEvent(event);
     }
 }

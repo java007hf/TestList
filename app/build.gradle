@@ -1,4 +1,5 @@
 apply plugin: 'com.android.application'
+apply plugin: com.aitsuki.plugin.Register
 
 android {
     compileSdkVersion 25
@@ -18,6 +19,31 @@ android {
         }
     }
     sourceSets { main { assets.srcDirs = ['src/main/assets', 'src/main/assets/2'] } }
+
+//    applicationVariants.all { variant->
+//        def dexTask = project.tasks.findByName("transformClassesWithDexForDebug")
+//        def preDexTask = project.tasks.findByName("transformClassesWithPreDexForDebug")
+//        if(preDexTask) {
+//            project.logger.error "======preDexTask======"
+//            preDexTask.inputs.files.files.each {file ->
+//                project.logger.error "inputs =$file.absolutePath"
+//            }
+//
+//            preDexTask.outputs.files.files.each {file ->
+//                project.logger.error "outputs =$file.absolutePath"
+//            }
+//        }
+//        if(dexTask) {
+//            project.logger.error "======dexTask======"
+//            dexTask.inputs.files.files.each {file ->
+//                project.logger.error "inputs =$file.absolutePath"
+//            }
+//
+//            dexTask.outputs.files.files.each {file ->
+//                project.logger.error "outputs =$file.absolutePath"
+//            }
+//        }
+//    }
 }
 
 dependencies {
