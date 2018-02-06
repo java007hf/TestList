@@ -1,5 +1,6 @@
 package ju.xposed.com.jumodle;
 
+import android.app.Activity;
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
@@ -16,7 +17,7 @@ import rx.Observable;
 import rx.Observer;
 import rx.Subscriber;
 
-public class TestRxJavaActivity extends AppCompatActivity {
+public class TestRxJavaActivity extends Activity {
     private static final String TAG = "TestRxJavaActivity";
 
     @Override

@@ -1,4 +1,4 @@
-package com.aitsuki.plugin
+package com.xsoft.plugin
 
 import com.android.build.gradle.AppExtension
 import org.gradle.api.Plugin;

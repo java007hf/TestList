@@ -1,5 +1,5 @@
 apply plugin: 'com.android.application'
-apply plugin: com.aitsuki.plugin.Register
+apply plugin: com.xsoft.plugin.Register
 
 android {
     compileSdkVersion 25

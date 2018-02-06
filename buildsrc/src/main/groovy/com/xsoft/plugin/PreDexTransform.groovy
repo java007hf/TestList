@@ -1,4 +1,4 @@
-package com.aitsuki.plugin
+package com.xsoft.plugin
 
 import com.android.build.api.transform.*
 import com.android.build.gradle.internal.pipeline.TransformManager
@@ -34,13 +34,39 @@ public class PreDexTransform extends Transform {
         return false
     }
 
+    private void printInfo() {
+        String getRootProject = project.getRootProject()
+        String getRootDir = project.getRootDir()
+        String getBuildDir = project.getBuildDir()
+        String getBuildFile = project.getBuildFile()
+        String getName = project.getName()
+        String getDisplayName = project.getDisplayName()
+        String getDescription = project.getDescription()
+        String getVersion = project.getVersion()
+        String getStatus = project.getStatus()
+        String getPath = project.getPath()
+        String getProjectDir = project.getProjectDir()
+
+        project.logger.error "=====getRootProject =$getRootProject"
+        project.logger.error "=====getRootDir =$getRootDir"
+        project.logger.error "=====getBuildDir =$getBuildDir"
+        project.logger.error "=====getBuildFile =$getBuildFile"
+        project.logger.error "=====getName =$getName"
+        project.logger.error "=====getDisplayName =$getDisplayName"
+        project.logger.error "=====getDescription =$getDescription"
+        project.logger.error "=====getVersion =$getVersion"
+        project.logger.error "=====getStatus =$getStatus"
+        project.logger.error "=====getPath =$getPath"
+        project.logger.error "=====getProjectDir =$getProjectDir"
+        project.logger.error "=====rootProject =$project.rootProject.name"
+    }
+
     @Override
     void transform(Context context, Collection<TransformInput> inputs,
                    Collection<TransformInput> referencedInputs,
                    TransformOutputProvider outputProvider, boolean isIncremental)
             throws IOException, TransformException, InterruptedException {
-
-        project.logger.error "=====rootProject =$project.rootProject.name"
+        printInfo();
 
         // 遍历transfrom的inputs
         // inputs有两种类型，一种是目录，一种是jar，需要分别遍历。
@@ -67,7 +93,7 @@ public class PreDexTransform extends Transform {
                 String jarPath = jarInput.file.absolutePath;
                 String projectName = project.rootProject.name;
                 if(jarPath.endsWith("classes.jar") && jarPath.contains("exploded-aar"+"\\"+projectName)) {
-                    Inject.injectJar(jarPath)
+//                    Inject.injectJar(jarPath)
                 }
 
                 // 重命名输出文件（同目录copyFile会冲突）
