@@ -2,6 +2,8 @@ package ju.xposed.com.jumodle;
 
 import android.content.Context;
 import android.graphics.Canvas;
+import android.support.annotation.Nullable;
+import android.util.AttributeSet;
 import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
@@ -13,21 +15,23 @@ import android.widget.LinearLayout;
 
 public class TestView extends View implements View.OnTouchListener {
     private static final String TAG = "TestView";
-    public TestView(Context context) {
-        super(context);
+
+    public TestView(Context context, @Nullable AttributeSet attrs) {
+        super(context, attrs);
         setOnTouchListener(this);
     }
 
+
     @Override
     public boolean onTouch(View v, MotionEvent event) {
-        Log.d(TAG, "===onTouch===", new RuntimeException());
+        Log.d(TAG, "===onTouch===" + event.getAction() , new RuntimeException());
         return false;
     }
 
     @Override
     public boolean onTouchEvent(MotionEvent event) {
-        Log.d(TAG, "===onTouchEvent===", new RuntimeException());
-        return super.onTouchEvent(event);
+        Log.d(TAG, "===onTouchEvent===" + event.getAction(), new RuntimeException());
+        return true;
     }
 
     @Override

@@ -19,25 +19,25 @@ public class TestViewActivity extends Activity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        mTestView = new TestView(this);
-        LinearLayout.LayoutParams layoutParams
-                = new LinearLayout.LayoutParams(
-                        LinearLayout.LayoutParams.MATCH_PARENT,
-                        LinearLayout.LayoutParams.MATCH_PARENT);
-        mTestView.setLayoutParams(layoutParams);
-        setContentView(mTestView);
+//        mTestView = new TestView(this);
+//        LinearLayout.LayoutParams layoutParams
+//                = new LinearLayout.LayoutParams(
+//                        LinearLayout.LayoutParams.MATCH_PARENT,
+//                        LinearLayout.LayoutParams.MATCH_PARENT);
+//        mTestView.setLayoutParams(layoutParams);
+        setContentView(R.layout.activity_testview);
     }
 
     @Override
     protected void onResume() {
         super.onResume();
 
-        mTestView.invalidate();
+//        mTestView.invalidate();
     }
 
     @Override
     public boolean onTouchEvent(MotionEvent event) {
-        Log.d(TAG, "===onTouchEvent==", new RuntimeException());
+        Log.d(TAG, "===onTouchEvent==" + event.getAction() , new RuntimeException());
         return super.onTouchEvent(event);
     }
 }
