@@ -66,6 +66,13 @@
                 <action android:name="ju.xposed.com.jumodle.TEST" />
             </intent-filter>
         </activity>
+
+        <activity android:name="com.xposed.news.ui.MainActivity"
+            android:label="news">
+            <intent-filter>
+                <action android:name="ju.xposed.com.jumodle.TEST" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>
