@@ -10,3 +10,7 @@ just for test
 4.touch dispatch event
 
 5.javassist modify R.java
+
+6.增加pull to refresh
+
+7.增加类似网易新闻页面
