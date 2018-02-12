@@ -79,7 +79,7 @@
         </activity>
 
         <activity android:name="in.srain.cube.views.ptr.demo.ui.activity.PtrDemoHomeActivity"
-            android:label="pull_to_refresh>
+            android:label="pull_to_refresh">
             <intent-filter>
                 <action android:name="ju.xposed.com.jumodle.TEST" />
             </intent-filter>
