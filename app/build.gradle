@@ -47,6 +47,11 @@ android {
 }
 
 dependencies {
+    compile(project(':ptr-lib')) {
+    }
+    compile 'in.srain.cube:clog:1.0.2'
+    compile 'in.srain.cube:cube-sdk:1.0.44.39-SNAPSHOT@aar'
+
     provided fileTree(include: ['*.jar'], dir: 'linklib')
     compile fileTree(include: ['*.jar'], dir: 'libs')
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
@@ -55,5 +60,6 @@ dependencies {
     compile 'com.android.support:appcompat-v7:25.+'
     compile 'com.android.support:recyclerview-v7:22.2.1'
     compile project(':viewPagerIndicator')
+
     testCompile 'junit:junit:4.12'
 }

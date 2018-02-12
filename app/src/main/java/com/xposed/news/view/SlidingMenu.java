@@ -3,6 +3,7 @@ package com.xposed.news.view;
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.util.AttributeSet;
+import android.util.Log;
 import android.util.TypedValue;
 import android.view.MotionEvent;
 import android.view.ViewGroup;
@@ -16,6 +17,7 @@ import ju.xposed.com.jumodle.R;
  * 侧滑菜单
  */
 public class SlidingMenu extends HorizontalScrollView {
+    private static final String TAG = "SlidingMenu";
     private LinearLayout mWrapperLayout;
     private ViewGroup mMenuView;
     private ViewGroup mMainView;
@@ -40,6 +42,7 @@ public class SlidingMenu extends HorizontalScrollView {
         mScreenWidth = context.getResources().getDisplayMetrics().widthPixels;
         TypedArray ta = context.obtainStyledAttributes(attrs, R.styleable.SlidingMenu);
         mMenuPaddingRight = ta.getDimensionPixelSize(R.styleable.SlidingMenu_paddingRight, (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_PX, 50, context.getResources().getDisplayMetrics()));
+        Log.d(TAG, "SlidingMenu mMenuPaddingRight = " + mMenuPaddingRight);
         ta.recycle();
     }
 
