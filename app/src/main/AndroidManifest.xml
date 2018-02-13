@@ -88,6 +88,20 @@
         <activity
             android:name="in.srain.cube.views.ptr.demo.ui.viewpager.ViewPagerActivity"
             android:windowSoftInputMode="stateAlwaysHidden|adjustResize"></activity>
+
+
+        <activity android:name="lib.homhomlib.design.ui.MainActivity"
+            android:label="slidingTest">
+            <intent-filter>
+                <action android:name="ju.xposed.com.jumodle.TEST" />
+            </intent-filter>
+        </activity>
+        <activity android:name="lib.homhomlib.design.ui.WebViewActivity">
+        </activity>
+        <activity android:name="lib.homhomlib.design.ui.ListViewActivity">
+        </activity>
+        <activity android:name="lib.homhomlib.design.ui.RecyclerViewActivity">
+        </activity>
     </application>
 
 </manifest>
