@@ -102,6 +102,16 @@
         </activity>
         <activity android:name="lib.homhomlib.design.ui.RecyclerViewActivity">
         </activity>
+
+        <activity android:name="com.baoyz.swipemenulistview.demo.MainActivity"
+            android:label="swiplistview">
+            <intent-filter>
+                <action android:name="ju.xposed.com.jumodle.TEST" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.baoyz.swipemenulistview.demo.SimpleActivity">
+        </activity>
+        <activity android:name="com.baoyz.swipemenulistview.demo.DifferentMenuActivity"/>
     </application>
 
 </manifest>
