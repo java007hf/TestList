@@ -112,6 +112,16 @@
         <activity android:name="com.baoyz.swipemenulistview.demo.SimpleActivity">
         </activity>
         <activity android:name="com.baoyz.swipemenulistview.demo.DifferentMenuActivity"/>
+
+
+        <activity android:name="com.xinlan.dragindicatorview.MainActivity"
+            android:label="dragview">
+            <intent-filter>
+                <action android:name="ju.xposed.com.jumodle.TEST" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.xinlan.dragindicatorview.SecondActivity">
+        </activity>
     </application>
 
 </manifest>
