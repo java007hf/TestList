@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="ju.xposed.com.jumodle">
 
     <uses-permission android:name="android.permission.INTERNET" />
@@ -15,6 +16,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/BaseTheme">
+
+        <meta-data
+            android:name="android.support.VERSION"
+            tools:replace="android:value"
+            android:value="26.1.0" />
 
         <meta-data
             android:name="xposedmodule"
@@ -122,6 +128,23 @@
         </activity>
         <activity android:name="com.xinlan.dragindicatorview.SecondActivity">
         </activity>
+
+        <activity
+            android:name="com.shuyu.frescoutils.MainActivity"
+            android:screenOrientation="portrait"
+            android:label="frescoUtils">
+            <intent-filter>
+                <action android:name="ju.xposed.com.jumodle.TEST" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.shuyu.frescoutils.ImageViewPagerActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/FullscreenTheme" />
+        <activity
+            android:name="com.shuyu.frescoutils.ListActivity"
+            android:screenOrientation="portrait" />
+
     </application>
 
 </manifest>

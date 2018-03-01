@@ -1,19 +1,15 @@
 [
     {
+        "merged": "/Users/benylwang/GitHub/jumodle/E:\\Workspace\\NeteaseNews\\viewPagerIndicator\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-mdpi-v4\\vpi__tab_selected_focused_holo.9.png",
+        "source": "/Users/benylwang/GitHub/jumodle/E:\\Workspace\\NeteaseNews\\viewPagerIndicator\\build\\intermediates\\bundles\\debug\\res\\drawable-mdpi-v4\\vpi__tab_selected_focused_holo.9.png"
+    },
+    {
         "merged": "/Users/benylwang/GitHub/jumodle/E:\\Workspace\\NeteaseNews\\viewPagerIndicator\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-mdpi-v4\\vpi__tab_unselected_focused_holo.9.png",
         "source": "/Users/benylwang/GitHub/jumodle/E:\\Workspace\\NeteaseNews\\viewPagerIndicator\\build\\intermediates\\bundles\\debug\\res\\drawable-mdpi-v4\\vpi__tab_unselected_focused_holo.9.png"
     },
     {
-        "merged": "/Users/benylwang/GitHub/jumodle/E:\\Workspace\\NeteaseNews\\viewPagerIndicator\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-mdpi-v4\\vpi__tab_selected_holo.9.png",
-        "source": "/Users/benylwang/GitHub/jumodle/E:\\Workspace\\NeteaseNews\\viewPagerIndicator\\build\\intermediates\\bundles\\debug\\res\\drawable-mdpi-v4\\vpi__tab_selected_holo.9.png"
-    },
-    {
         "merged": "/Users/benylwang/GitHub/jumodle/viewPagerIndicator/build/intermediates/res/merged/androidTest/debug/drawable-mdpi-v4/vpi__tab_unselected_pressed_holo.9.png",
         "source": "/Users/benylwang/GitHub/jumodle/viewPagerIndicator/build/intermediates/bundles/debug/res/drawable-mdpi-v4/vpi__tab_unselected_pressed_holo.9.png"
-    },
-    {
-        "merged": "/Users/benylwang/GitHub/jumodle/E:\\Workspace\\NeteaseNews\\viewPagerIndicator\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-mdpi-v4\\vpi__tab_unselected_pressed_holo.9.png",
-        "source": "/Users/benylwang/GitHub/jumodle/E:\\Workspace\\NeteaseNews\\viewPagerIndicator\\build\\intermediates\\bundles\\debug\\res\\drawable-mdpi-v4\\vpi__tab_unselected_pressed_holo.9.png"
     },
     {
         "merged": "/Users/benylwang/GitHub/jumodle/viewPagerIndicator/build/intermediates/res/merged/androidTest/debug/drawable-mdpi-v4/vpi__tab_selected_pressed_holo.9.png",
@@ -24,27 +20,31 @@
         "source": "/Users/benylwang/GitHub/jumodle/viewPagerIndicator/build/intermediates/bundles/debug/res/drawable-mdpi-v4/vpi__tab_unselected_focused_holo.9.png"
     },
     {
+        "merged": "/Users/benylwang/GitHub/jumodle/E:\\Workspace\\NeteaseNews\\viewPagerIndicator\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-mdpi-v4\\vpi__tab_unselected_holo.9.png",
+        "source": "/Users/benylwang/GitHub/jumodle/E:\\Workspace\\NeteaseNews\\viewPagerIndicator\\build\\intermediates\\bundles\\debug\\res\\drawable-mdpi-v4\\vpi__tab_unselected_holo.9.png"
+    },
+    {
+        "merged": "/Users/benylwang/GitHub/jumodle/E:\\Workspace\\NeteaseNews\\viewPagerIndicator\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-mdpi-v4\\vpi__tab_unselected_pressed_holo.9.png",
+        "source": "/Users/benylwang/GitHub/jumodle/E:\\Workspace\\NeteaseNews\\viewPagerIndicator\\build\\intermediates\\bundles\\debug\\res\\drawable-mdpi-v4\\vpi__tab_unselected_pressed_holo.9.png"
+    },
+    {
         "merged": "/Users/benylwang/GitHub/jumodle/viewPagerIndicator/build/intermediates/res/merged/androidTest/debug/drawable-mdpi-v4/vpi__tab_selected_focused_holo.9.png",
         "source": "/Users/benylwang/GitHub/jumodle/viewPagerIndicator/build/intermediates/bundles/debug/res/drawable-mdpi-v4/vpi__tab_selected_focused_holo.9.png"
-    },
-    {
-        "merged": "/Users/benylwang/GitHub/jumodle/E:\\Workspace\\NeteaseNews\\viewPagerIndicator\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-mdpi-v4\\vpi__tab_selected_pressed_holo.9.png",
-        "source": "/Users/benylwang/GitHub/jumodle/E:\\Workspace\\NeteaseNews\\viewPagerIndicator\\build\\intermediates\\bundles\\debug\\res\\drawable-mdpi-v4\\vpi__tab_selected_pressed_holo.9.png"
-    },
-    {
-        "merged": "/Users/benylwang/GitHub/jumodle/E:\\Workspace\\NeteaseNews\\viewPagerIndicator\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-mdpi-v4\\vpi__tab_selected_focused_holo.9.png",
-        "source": "/Users/benylwang/GitHub/jumodle/E:\\Workspace\\NeteaseNews\\viewPagerIndicator\\build\\intermediates\\bundles\\debug\\res\\drawable-mdpi-v4\\vpi__tab_selected_focused_holo.9.png"
     },
     {
         "merged": "/Users/benylwang/GitHub/jumodle/viewPagerIndicator/build/intermediates/res/merged/androidTest/debug/drawable-mdpi-v4/vpi__tab_selected_holo.9.png",
         "source": "/Users/benylwang/GitHub/jumodle/viewPagerIndicator/build/intermediates/bundles/debug/res/drawable-mdpi-v4/vpi__tab_selected_holo.9.png"
     },
     {
+        "merged": "/Users/benylwang/GitHub/jumodle/E:\\Workspace\\NeteaseNews\\viewPagerIndicator\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-mdpi-v4\\vpi__tab_selected_pressed_holo.9.png",
+        "source": "/Users/benylwang/GitHub/jumodle/E:\\Workspace\\NeteaseNews\\viewPagerIndicator\\build\\intermediates\\bundles\\debug\\res\\drawable-mdpi-v4\\vpi__tab_selected_pressed_holo.9.png"
+    },
+    {
         "merged": "/Users/benylwang/GitHub/jumodle/viewPagerIndicator/build/intermediates/res/merged/androidTest/debug/drawable-mdpi-v4/vpi__tab_unselected_holo.9.png",
         "source": "/Users/benylwang/GitHub/jumodle/viewPagerIndicator/build/intermediates/bundles/debug/res/drawable-mdpi-v4/vpi__tab_unselected_holo.9.png"
     },
     {
-        "merged": "/Users/benylwang/GitHub/jumodle/E:\\Workspace\\NeteaseNews\\viewPagerIndicator\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-mdpi-v4\\vpi__tab_unselected_holo.9.png",
-        "source": "/Users/benylwang/GitHub/jumodle/E:\\Workspace\\NeteaseNews\\viewPagerIndicator\\build\\intermediates\\bundles\\debug\\res\\drawable-mdpi-v4\\vpi__tab_unselected_holo.9.png"
+        "merged": "/Users/benylwang/GitHub/jumodle/E:\\Workspace\\NeteaseNews\\viewPagerIndicator\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-mdpi-v4\\vpi__tab_selected_holo.9.png",
+        "source": "/Users/benylwang/GitHub/jumodle/E:\\Workspace\\NeteaseNews\\viewPagerIndicator\\build\\intermediates\\bundles\\debug\\res\\drawable-mdpi-v4\\vpi__tab_selected_holo.9.png"
     }
 ]

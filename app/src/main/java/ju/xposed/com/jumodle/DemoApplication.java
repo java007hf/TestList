@@ -1,6 +1,10 @@
 package ju.xposed.com.jumodle;
 
 import android.app.Application;
+
+import com.facebook.drawee.backends.pipeline.Fresco;
+import com.facebook.imagepipeline.core.ImagePipelineConfig;
+
 import in.srain.cube.Cube;
 import in.srain.cube.image.ImageLoaderFactory;
 import in.srain.cube.request.RequestCacheManager;
@@ -40,5 +44,11 @@ public class DemoApplication extends Application {
         // ImageLoaderFactory.init(this);
         RequestCacheManager.init(this, dir, 1024 * 10, 1024 * 10);
         Cube.onCreate(this);
+
+
+        ImagePipelineConfig config = ImagePipelineConfig.newBuilder(this)
+                .setDownsampleEnabled(true)
+                .build();
+        Fresco.initialize(this, config);
     }
 }

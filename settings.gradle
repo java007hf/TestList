@@ -1,1 +1,1 @@
-include ':app', ':buildsrc', ':viewPagerIndicator', ':ptr-lib'
+include ':app', ':buildsrc', ':viewPagerIndicator', ':ptr-lib', ':frescoUtil'
