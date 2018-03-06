@@ -17,7 +17,7 @@ import rx.Observable;
 import rx.Observer;
 import rx.Subscriber;
 
-public class TestRxJavaActivity extends Activity {
+public class TestRxJavaActivity extends AppCompatActivity {
     private static final String TAG = "TestRxJavaActivity";
 
     @Override

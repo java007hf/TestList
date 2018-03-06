@@ -3,6 +3,7 @@ package ju.xposed.com.jumodle;
 import android.app.Activity;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.MotionEvent;
 import android.widget.LinearLayout;
@@ -11,7 +12,7 @@ import android.widget.LinearLayout;
  * Created by benylwang on 2018/1/25.
  */
 
-public class TestViewActivity extends Activity {
+public class TestViewActivity extends AppCompatActivity {
     private static final String TAG = "TestViewActivity";
     private TestView mTestView;
 

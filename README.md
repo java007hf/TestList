@@ -25,7 +25,7 @@ just for test
 
 12.集成fresco demo,能够解决图片load，内存分配回收，在大量图片list的case中会用到，原理及使用方法：
 > https://www.jianshu.com/p/6f13474d36ac
-
+>
 > https://www.jianshu.com/p/265c628a0d59
 > 
 > https://www.fresco-cn.org/docs/index.html

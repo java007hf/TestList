@@ -29,7 +29,7 @@ import java.util.Random;
  * Created by benylwang on 2017/12/13.
  */
 
-public class TestRecyclerViewActivity extends Activity {
+public class TestRecyclerViewActivity extends AppCompatActivity {
     private static final String TAG = "TestRecyclerViewActivity";
     private RecyclerView mRecyclerView;
     private List<DataInfo> mDatas;
@@ -46,7 +46,7 @@ public class TestRecyclerViewActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_recycler);
 
-        getActionBar().setIcon(ju.xposed.com.jumodle.R.drawable.ic_launcher);
+        getSupportActionBar().setIcon(ju.xposed.com.jumodle.R.drawable.ic_launcher);
 
         initData();
         mRecyclerView = (RecyclerView) findViewById(R.id.recyclerView);

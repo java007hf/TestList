@@ -3,6 +3,7 @@ package ju.xposed.com.jumodle;
 import android.app.Activity;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 
@@ -12,7 +13,7 @@ import com.xposed.utils.GetWebUtils;
  * Created by benylwang on 2018/1/3.
  */
 
-public class TestHttpActivity extends Activity {
+public class TestHttpActivity extends AppCompatActivity {
     private static final String TAG = "TestHttpActivity";
     private static final String baseURL = "http://10.245.12.92:8080/users/";
 
