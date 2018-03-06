@@ -30,9 +30,11 @@ just for test
 > 
 > https://www.fresco-cn.org/docs/index.html
 
-主要原理：  
-a.基于DraweeView实现真正显示的ImageView  
-b.通过调用setController->mController.onAttach()->submitRequest()->mDataSource.subscribe();  
-c.view的onAttachedToWindow和onDetachedFromWindow也都会调用submitRequest来决定加载资源或者释放资源  
-d.老版本是通过匿名共享内存来存储，新版本是基于java堆存储   
-e.资源分了4级缓存 内存图片->内存未解码->文件存储->网络资源
+> 主要原理：  
+> a.基于DraweeView实现真正显示的ImageView  
+> b.通过调用setController->mController.onAttach()->submitRequest()->mDataSource.subscribe();  
+> c.view的onAttachedToWindow和onDetachedFromWindow也都会调用submitRequest来决定加载资源或者释放资源  
+> d.老版本是通过匿名共享内存来存储，新版本是基于java堆存储   
+> e.资源分了4级缓存 内存图片->内存未解码->文件存储->网络资源
+
+13.集成照相机拍照和录像功能

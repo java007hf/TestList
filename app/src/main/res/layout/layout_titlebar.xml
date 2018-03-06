@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/titlebar"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/titleBar_background">
+
+    <ImageButton
+        android:id="@+id/title_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:background="@drawable/selector_back_button"
+        android:layout_centerVertical="true"
+        android:paddingTop="14dp"
+        android:paddingBottom="14dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="14dp"
+        android:src="@drawable/btn_back_n" />
+
+    <TextView
+        android:id="@+id/title_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:text="Title"
+        android:textColor="@color/titleTextColor"
+        android:textSize="17sp"
+         />
+
+    <TextView
+        android:id="@+id/title_action"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:clickable="true"
+        android:padding="10dp"
+        android:text="action"
+        android:textColor="@color/titleaction_color"
+        android:textSize="14dp"
+        />
+
+</RelativeLayout>

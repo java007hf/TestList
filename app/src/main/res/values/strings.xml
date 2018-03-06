@@ -32,5 +32,11 @@
 
     <string name="ptr_demo_material_style_pin_content">Material Style\nPin Content\n v4 style</string>
     <string name="ptr_demo_enable_next_ptr_at_once">Enable Next PTR at once</string>
-
+    
+    
+    <string name="generating">正在生成</string>
+    <string name="state_compress">正在压缩</string>
+    <string name="state_compress_error">压缩失败</string>
+    <string name="state_compress_end">压缩成功</string>
+<string name="Cancel">取消</string>	
 </resources>

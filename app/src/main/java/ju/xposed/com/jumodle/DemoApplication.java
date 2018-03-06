@@ -4,6 +4,7 @@ import android.app.Application;
 
 import com.facebook.drawee.backends.pipeline.Fresco;
 import com.facebook.imagepipeline.core.ImagePipelineConfig;
+import com.yue.customcamera.CameraApplicaitonImpl;
 
 import in.srain.cube.Cube;
 import in.srain.cube.image.ImageLoaderFactory;
@@ -50,5 +51,7 @@ public class DemoApplication extends Application {
                 .setDownsampleEnabled(true)
                 .build();
         Fresco.initialize(this, config);
+
+        CameraApplicaitonImpl.getInstance().onCreate(getApplicationContext());
     }
 }
