@@ -38,5 +38,13 @@
     <string name="state_compress">正在压缩</string>
     <string name="state_compress_error">压缩失败</string>
     <string name="state_compress_end">压缩成功</string>
-<string name="Cancel">取消</string>	
+    <string name="Cancel">取消</string>	
+
+
+    <!-- UI Elements -->
+    <string name="btn_capture">Click</string>
+
+    <!-- Toast Messages -->
+    <string name="camera_not_found">No camera harware found</string>
+    <string name="take_photo_help">Touch anywhere on screen to take picture</string>
 </resources>

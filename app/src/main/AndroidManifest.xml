@@ -42,7 +42,9 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.AppCompat.Light.DarkActionBar">
+        android:theme="@style/Theme.AppCompat.Light.DarkActionBar"
+        android:hardwareAccelerated="false"
+        android:largeHeap="true">
 
         <meta-data
             android:name="android.support.VERSION"
@@ -192,6 +194,23 @@
         <activity android:name="com.yue.customcamera.activity.PlayVideoActivity" />
         <activity android:name="com.yue.customcamera.activity.ShowPicActivity"></activity>
 
+
+        <activity
+            android:name="org.gaochun.camera.CameraActivity"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+            android:label="Camera2"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="ju.xposed.com.jumodle.TEST" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="org.gaochun.camera.PhotoProcessActivity"
+            android:configChanges="keyboardHidden|orientation|locale|screenSize"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
     </application>
 
 </manifest>
