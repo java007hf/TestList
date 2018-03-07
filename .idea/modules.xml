@@ -5,6 +5,7 @@
       <module fileurl="file://$PROJECT_DIR$/androidffmpeglibrary/androidffmpeglibrary.iml" filepath="$PROJECT_DIR$/androidffmpeglibrary/androidffmpeglibrary.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/buildsrc/buildsrc.iml" filepath="$PROJECT_DIR$/buildsrc/buildsrc.iml" />
+      <module fileurl="file://$PROJECT_DIR$/face_sdk/face_sdk.iml" filepath="$PROJECT_DIR$/face_sdk/face_sdk.iml" />
       <module fileurl="file://$PROJECT_DIR$/frescoUtil/frescoUtil.iml" filepath="$PROJECT_DIR$/frescoUtil/frescoUtil.iml" />
       <module fileurl="file://$PROJECT_DIR$/jumodle.iml" filepath="$PROJECT_DIR$/jumodle.iml" />
       <module fileurl="file://$PROJECT_DIR$/ptr-lib/ptr-lib.iml" filepath="$PROJECT_DIR$/ptr-lib/ptr-lib.iml" />

@@ -1,1 +1,1 @@
-include ':app', ':buildsrc', ':viewPagerIndicator', ':ptr-lib', ':frescoUtil', ':androidffmpeglibrary'
+include ':app', ':buildsrc', ':viewPagerIndicator', ':ptr-lib', ':frescoUtil', ':androidffmpeglibrary', ':face_sdk'

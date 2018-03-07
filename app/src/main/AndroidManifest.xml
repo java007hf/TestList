@@ -211,6 +211,33 @@
             android:exported="false"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="stateHidden" />
+
+        <!--face++ begin-->
+        <activity
+            android:name="com.facepp.demo.LoadingActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Holo.NoActionBar"
+            android:label="人脸识别">
+            <intent-filter>
+                <action android:name="ju.xposed.com.jumodle.TEST" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="com.facepp.demo.FaceppActionActivity"
+            android:theme="@android:style/Theme.Holo.NoActionBar"
+            android:screenOrientation="portrait"></activity>
+
+        <activity
+            android:name="com.facepp.demo.OpenglActivity"
+            android:theme="@android:style/Theme.Holo.NoActionBar"
+            android:screenOrientation="portrait"></activity>
+        <activity android:name="com.facepp.demo.FeatureInfoSettingActivity"
+            android:theme="@android:style/Theme.Holo.NoActionBar"
+            android:screenOrientation="portrait"
+            ></activity>
+        <!--face++ end-->
+
     </application>
 
 </manifest>

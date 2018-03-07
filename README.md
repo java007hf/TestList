@@ -38,3 +38,11 @@ just for test
 > e.资源分了4级缓存 内存图片->内存未解码->文件存储->网络资源
 
 13.集成照相机拍照和录像功能
+
+14.集成人脸识别功能，使用face++提供的能力，区别于之前的camera实现不同在于：  
+>1.使用GLSurfaceView  
+>2.camera通过startPreview可以绑定SurfaceTexture  
+>3.SurfaceTexture和mTextureID关联  
+>4.流程：GLSurfaceView.setRenderer ->onSurfaceCreated->surfaceInit(执行前面的2，3)->照相机预览有数据->onPreviewFrame(获取人脸数据)->onDrawFrame(根据mTextureID和人脸数据来绘制，并执行updateTexImage显示)->onFrameAvailable(执行requestRender)
+
+**可以学习这个**：http://blog.csdn.net/aa841538513/article/details/52291759
