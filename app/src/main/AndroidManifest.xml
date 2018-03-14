@@ -237,6 +237,15 @@
             android:screenOrientation="portrait"
             ></activity>
         <!--face++ end-->
+	
+	<!--view binding MVVM begin -->
+	<activity android:name="com.victor.databindingdemo.MainActivity"
+		android:label="DataBinding">
+            <intent-filter>
+                <action android:name="ju.xposed.com.jumodle.TEST" />
+            </intent-filter>
+        </activity>
+	<!--end -->
 
     </application>
 

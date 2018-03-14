@@ -47,3 +47,8 @@
 >4.流程：GLSurfaceView.setRenderer ->onSurfaceCreated->surfaceInit(执行前面的2，3)->照相机预览有数据->onPreviewFrame(获取人脸数据)->onDrawFrame(根据mTextureID和人脸数据来绘制，并执行updateTexImage显示)->onFrameAvailable(执行requestRender)
 
 **可以学习这个**：[http://blog.csdn.net/aa841538513/article/details/52291759]()
+
+15.增加data binding，运动到MVVM模式  
+**可以学习这个**：
+>[https://www.jianshu.com/p/eb29c691d370]()  
+>[https://www.jianshu.com/p/ba4982be30f8]()
