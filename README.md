@@ -25,10 +25,8 @@
 11.增加仿QQ拖拽view；实现原理：集成textview，获取activity的rootview，然后拖拽的时候拷贝一个拖拽view，根据event 坐标设置view的坐标；同是update springview 来实现粘性的效果
 
 12.集成fresco demo,能够解决图片load，内存分配回收，在大量图片list的case中会用到，原理及使用方法：
-> [https://www.jianshu.com/p/6f13474d36ac]()
->
-> [https://www.jianshu.com/p/265c628a0d59]()
-> 
+> [https://www.jianshu.com/p/6f13474d36ac]()  
+> [https://www.jianshu.com/p/265c628a0d59]()  
 > [https://www.fresco-cn.org/docs/index.html]()
 
 > 主要原理：  
@@ -48,7 +46,8 @@
 
 **可以学习这个**：[http://blog.csdn.net/aa841538513/article/details/52291759]()
 
-15.增加data binding，运动到MVVM模式  
+15.增加data binding，运用到MVVM模式  
 **可以学习这个**：
 >[https://www.jianshu.com/p/eb29c691d370]()  
->[https://www.jianshu.com/p/ba4982be30f8]()
+>[https://www.jianshu.com/p/ba4982be30f8]()  
+>[https://www.jianshu.com/p/2fc41a310f79]()

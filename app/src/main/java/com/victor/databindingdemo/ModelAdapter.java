@@ -26,11 +26,11 @@ public class ModelAdapter extends BaseObservable {
 
     public void setFirstName(String name){
         if (user != null) user.firstName = name;
-        notifyPropertyChanged(BR.user);
+        notifyPropertyChanged(BR.name);
     }
 
     public void setLastName(String name){
         if (user != null) user.lastName = name;
-        notifyPropertyChanged(BR.user);
+        notifyPropertyChanged(BR.name);
     }
 }

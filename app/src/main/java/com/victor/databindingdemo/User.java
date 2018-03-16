@@ -30,4 +30,9 @@ public class User {
         }
         return sb.toString();
     }
+
+    //测试xml里面定义的user.firstname其实是先调用get方法
+//    public String getFirstName(){
+//        return "Alias";
+//    }
 }

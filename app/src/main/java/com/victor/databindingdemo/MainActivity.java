@@ -15,6 +15,7 @@ import ju.xposed.com.jumodle.databinding.ActivityMvvmMainBinding;
 public class MainActivity extends AppCompatActivity {
     private ObservableInt visibility = new ObservableInt();
     private ActivityMvvmMainBinding binding;
+    private User user = new User();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,7 +33,6 @@ public class MainActivity extends AppCompatActivity {
 
     private void fill() {
         // 初始化数据
-        User user = new User();
         user.firstName = "wang";
         user.lastName = "yingli";
         user.phone = "1860000000";
@@ -41,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
         binding.setUser(user);
 
         // 绑定方法和监听
-        MyHandler handler = new MyHandler();
+        MyHandler handler = new MyHandler(user);
         MyTask task = new MyTask(this);
         binding.setHandler(handler);
         binding.setTask(task);
@@ -53,4 +53,11 @@ public class MainActivity extends AppCompatActivity {
         visibility.set(user != null ? View.VISIBLE : View.GONE);
         adapter.setFirstName("aaa");
     }
+
+    @Override
+    protected void onResume() {
+        user.phone = "1860000333"; //有效，因为setUser调用了handler message放入到队列不会立即执行
+        super.onResume();
+    }
+
 }
