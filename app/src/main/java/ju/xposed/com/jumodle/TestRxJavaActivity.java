@@ -16,6 +16,11 @@ import android.webkit.WebView;
 import rx.Observable;
 import rx.Observer;
 import rx.Subscriber;
+import rx.android.schedulers.AndroidSchedulers;
+import rx.functions.Action1;
+import rx.functions.Func1;
+import rx.schedulers.Schedulers;
+import sensetime.senseme.com.effects.avrecorder.FFmpegJNI;
 
 public class TestRxJavaActivity extends AppCompatActivity {
     private static final String TAG = "TestRxJavaActivity";
@@ -42,6 +47,8 @@ public class TestRxJavaActivity extends AppCompatActivity {
                 subscriber.onNext("1");
                 subscriber.onNext("2");
                 subscriber.onNext("3");
+
+//                FFmpegJNI.ffmpeg_run()
                 subscriber.onCompleted();
             }
         });
@@ -64,6 +71,24 @@ public class TestRxJavaActivity extends AppCompatActivity {
         };
 
         Log.d(TAG, "==observable.subscribe(observer);==");
-        observable.subscribe(observer);
+        observable
+                .subscribeOn(Schedulers.io()) // 指定 subscribe() 发生在 IO 线程
+                .observeOn(AndroidSchedulers.mainThread())// 指定 Subscriber 的回调发生在主线程;
+                .subscribe(observer);
+
+        Observable.just("images/logo.png") // 输入类型 String
+                .map(new Func1<String, String>() {
+                    @Override
+                    public String call(String filePath) { // 参数类型 String
+                        return "path:"+filePath; // 返回类型 Bitmap
+                    }
+                })
+                .subscribe(new Action1<String>() {
+                    @Override
+                    public void call(String bitmap) { // 参数类型 Bitmap
+                        Log.d(TAG, "==call=="+bitmap);
+                    }
+                });
+
     }
 }
