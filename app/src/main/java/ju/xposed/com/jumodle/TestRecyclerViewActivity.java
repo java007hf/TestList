@@ -35,6 +35,7 @@ public class TestRecyclerViewActivity extends AppCompatActivity {
     private List<DataInfo> mDatas;
     private RecyclerViewAdapter mAdapter;
     private Random random = new Random(12313123l);
+    private StaggeredGridLayoutManager mgr;
 
     class DataInfo {
         String text;
@@ -57,7 +58,9 @@ public class TestRecyclerViewActivity extends AppCompatActivity {
         mRecyclerView.addItemDecoration(new DividerGridItemDecoration(this));
 //        mRecyclerView.setLayoutManager(new GridLayoutManager(this, 5));
 
-        mRecyclerView.setLayoutManager(new StaggeredGridLayoutManager(4, StaggeredGridLayoutManager.VERTICAL));
+        mRecyclerView.setLayoutManager(mgr = new StaggeredGridLayoutManager(4, StaggeredGridLayoutManager.VERTICAL));
+
+        mRecyclerView.addOnScrollListener(new ScrollLoadMoreListener());
 
         // 设置组件复用回收池
         RecyclerView.RecycledViewPool viewPool = new RecyclerView.RecycledViewPool();
@@ -80,6 +83,21 @@ public class TestRecyclerViewActivity extends AppCompatActivity {
             }
         });
 
+    }
+
+    public static class ScrollLoadMoreListener extends RecyclerView.OnScrollListener {
+        @Override
+        public void onScrolled(RecyclerView recyclerView, int dx, int dy) {
+            super.onScrolled(recyclerView, dx, dy);
+
+            Log.e(TAG, "onScrolled dy = " + dy);
+        }
+
+        @Override
+        public void onScrollStateChanged(RecyclerView recyclerView, int newState) {
+            super.onScrollStateChanged(recyclerView, newState);
+            Log.e(TAG, "onScrollStateChanged newState = " + newState);
+        }
     }
 
     @Override
