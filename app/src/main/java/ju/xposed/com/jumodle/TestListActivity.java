@@ -5,6 +5,7 @@ import android.app.ListActivity;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.util.Log;
@@ -35,6 +36,18 @@ public class TestListActivity extends ListActivity {
                 android.R.layout.simple_list_item_1, new String[] { "title" },
                 new int[] { android.R.id.text1 }));
         getListView().setTextFilterEnabled(true);
+
+        Intent intent =getIntent();
+        Log.e(TAG, "scheme:" +intent.getScheme());
+        Uri uri =intent.getData();
+        if (uri != null) {
+            Log.e(TAG, "scheme: " + uri.getScheme());
+            Log.e(TAG, "host: " + uri.getHost());
+            Log.e(TAG, "port: " + uri.getPort());
+            Log.e(TAG, "path: " + uri.getPath());
+            Log.e(TAG, "queryString: " + uri.getQuery());
+            Log.e(TAG, "queryParameter: " + uri.getQueryParameter("key"));
+        }
     }
 
     protected List<Map<String, Object>> getData(String prefix) {

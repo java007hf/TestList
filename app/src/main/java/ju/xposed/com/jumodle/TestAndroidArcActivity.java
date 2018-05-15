@@ -1,5 +1,6 @@
 package ju.xposed.com.jumodle;
 
+import android.arch.lifecycle.LiveData;
 import android.arch.persistence.room.Room;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -45,6 +46,7 @@ public class TestAndroidArcActivity
         mAppDatabase = Room.databaseBuilder(getApplicationContext(),
                 AppDatabase.class, "database-name").build();
         mUserDao = mAppDatabase.userDao();
+//        getLifecycle()
     }
 
     public void invoke(View view) {
@@ -118,33 +120,34 @@ public class TestAndroidArcActivity
 
                 break;
             case R.id.query:
-                Flowable.create(new FlowableOnSubscribe<Object>() {
+//                Flowable.create(new FlowableOnSubscribe<Object>() {
+//
+//                    @Override
+//                    public void subscribe(FlowableEmitter<Object> e) throws Exception {
+//                        List<User> users = mUserDao.getAll();
+//                        for(User u : users) {
+//                            Log.e(TAG, "user = " + u);
+//                        }
+//                        e.onNext(new Object());
+//                    }
+//                }, BackpressureStrategy.BUFFER).subscribeOn(Schedulers.io())
+//                        .observeOn(AndroidSchedulers.mainThread())
+//                        .subscribe(new Consumer<Object>() {
+//                            @Override
+//                            public void accept(Object o) throws Exception {
+//                                Log.e(TAG, "===query==accept=" + o);
+//                            }
+//                        }, new Consumer<Throwable>() {
+//
+//                            @Override
+//                            public void accept(Throwable throwable) throws Exception {
+//                                throwable.printStackTrace();
+//                                Log.e(TAG, "===query==onError=" + throwable.toString());
+//                            }
+//                        });
 
-                    @Override
-                    public void subscribe(FlowableEmitter<Object> e) throws Exception {
-                        List<User> users = mUserDao.getAll();
-                        for(User u : users) {
-                            Log.e(TAG, "user = " + u);
-                        }
-                        e.onNext(new Object());
-                    }
-                }, BackpressureStrategy.BUFFER).subscribeOn(Schedulers.io())
-                        .observeOn(AndroidSchedulers.mainThread())
-                        .subscribe(new Consumer<Object>() {
-                            @Override
-                            public void accept(Object o) throws Exception {
-                                Log.e(TAG, "===query==accept=" + o);
-                            }
-                        }, new Consumer<Throwable>() {
 
-                            @Override
-                            public void accept(Throwable throwable) throws Exception {
-                                throwable.printStackTrace();
-                                Log.e(TAG, "===query==onError=" + throwable.toString());
-                            }
-                        });
-
-
+                LiveData<List<User>> listLiveData = mUserDao.getAllByLiveData();
                 break;
             case R.id.update:
                 Flowable.create(new FlowableOnSubscribe<Object>() {

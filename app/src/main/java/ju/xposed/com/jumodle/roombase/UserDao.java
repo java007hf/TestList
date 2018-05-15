@@ -1,5 +1,6 @@
 package ju.xposed.com.jumodle.roombase;
 
+import android.arch.lifecycle.LiveData;
 import android.arch.persistence.room.Dao;
 import android.arch.persistence.room.Delete;
 import android.arch.persistence.room.Insert;
@@ -16,6 +17,9 @@ import java.util.List;
 public interface UserDao {
     @Query("SELECT * FROM user")
     List<User> getAll();
+
+    @Query("SELECT * FROM user")
+    LiveData<List<User>> getAllByLiveData();
 
     @Query("SELECT * FROM user WHERE uid IN (:userIds)")
     List<User> loadAllByIds(int[] userIds);
