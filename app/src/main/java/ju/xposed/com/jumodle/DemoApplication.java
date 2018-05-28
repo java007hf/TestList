@@ -1,6 +1,7 @@
 package ju.xposed.com.jumodle;
 
 import android.app.Application;
+import android.content.Intent;
 
 import com.facebook.drawee.backends.pipeline.Fresco;
 import com.facebook.imagepipeline.core.ImagePipelineConfig;
@@ -53,5 +54,12 @@ public class DemoApplication extends Application {
         Fresco.initialize(this, config);
 
         CameraApplicaitonImpl.getInstance().onCreate(getApplicationContext());
+
+        startDemoService();
+    }
+
+    private void startDemoService() {
+        Intent intent = new Intent(this, TestService.class);
+        startService(intent);
     }
 }

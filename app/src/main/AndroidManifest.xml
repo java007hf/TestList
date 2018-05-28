@@ -111,6 +111,12 @@
                 <action android:name="ju.xposed.com.jumodle.TEST" />
             </intent-filter>
         </activity>
+        <service android:name=".TestService" >
+            <intent-filter>
+                <action android:name="ju.xposed.com.jumodle.TestService" />
+            </intent-filter>
+        </service>
+
 
         <activity
             android:name="com.xposed.news.ui.MainActivity"
